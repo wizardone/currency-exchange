@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "build": "browserify js/components/board.js -o lib/components/board.js -t [ babelify --presets [es2015 react] ]"
+    "build": "watchify js/components/board.js -o lib/components/board.js -t [ babelify --presets [es2015 react] ] -v"
   },
   "keywords": [
     "currency",
