@@ -8,8 +8,7 @@ export default class Rate extends React.Component {
 
   render(){
     return (
-      <div>I AM RATE</div>
+      <div>I AM CURRENCY RATE</div>
     )
   }
 }
-//module.exports = Rate;

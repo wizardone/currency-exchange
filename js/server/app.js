@@ -5,7 +5,8 @@ let request = require('request');
 let config  = require('../config.js');
 
 app.get('/rates', (req, res) => {
-  // Promise
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
   request({method: 'GET', uri: config.get('baseUrl')}, (error, response, body) => {
     if(response.statusCode == '200'){
       res.send(body);
