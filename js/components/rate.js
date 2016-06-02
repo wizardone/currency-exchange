@@ -13,3 +13,8 @@ export default class Rate extends React.Component {
     )
   }
 }
+
+Rate.propTypes = {
+  price: React.PropTypes.number,
+  rate: React.PropTypes.string
+}
