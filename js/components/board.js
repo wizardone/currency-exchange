@@ -25,8 +25,6 @@ class Board extends React.Component {
 
     }).then((response) => {
       let jsonResponse = JSON.parse(response);
-      console.log(jsonResponse.base);
-      console.log(jsonResponse.rates);
       this.setState({ base: jsonResponse.base, rates: jsonResponse.rates });
     }, (response) => {
       this.setState({ error: true })
@@ -39,10 +37,15 @@ class Board extends React.Component {
   }
 
   render() {
+    let rates = this.state.rates;
     return (
       <div>
-      <p>Base: { this.state.base}</p>
-      <p>Rates: { this.state.rates }</p>
+        <div>Base: { this.state.base}</div>
+        <div>Rates: { Object.keys(rates).map((rate, i) => {
+          return (
+            <p key={i}>{rate} : {rates[rate]}</p>
+          )
+        }) }</div>
       </div>
     )
   }
