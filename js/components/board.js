@@ -6,6 +6,7 @@ import Rate from './rate.js'
 class Board extends React.Component {
   constructor(){
     super();
+    this.state = { rates: '', error: false, base: '' }
   }
 
   componentWillMount(){
@@ -23,9 +24,12 @@ class Board extends React.Component {
       request.send();
 
     }).then((response) => {
-      console.log(`Success ${response}`);
+      let jsonResponse = JSON.parse(response);
+      console.log(jsonResponse.base);
+      console.log(jsonResponse.rates);
+      this.setState({ base: jsonResponse.base, rates: jsonResponse.rates });
     }, (response) => {
-      console.log(`Fail ${response}`);
+      this.setState({ error: true })
     });
 
   }
@@ -34,11 +38,11 @@ class Board extends React.Component {
 
   }
 
-  render(){
+  render() {
     return (
       <div>
-      <div>I AM BOARD</div>
-      <Rate />
+      <p>Base: { this.state.base}</p>
+      <p>Rates: { this.state.rates }</p>
       </div>
     )
   }

@@ -24,6 +24,6 @@ let getCurrencyRates = () => {
   return responseBody;
 }
 
-app.listen(5555, () => {
+app.listen(3001, () => {
   console.log('listening...');
 })
