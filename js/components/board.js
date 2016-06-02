@@ -9,7 +9,7 @@ class Board extends React.Component {
     this.state = { rates: '', error: false, base: '' }
   }
 
-  componentWillMount(){
+  componentDidMount(){
     let promise = new Promise((resolve, reject) => {
       let request = new XMLHttpRequest();
 
@@ -32,10 +32,6 @@ class Board extends React.Component {
 
   }
 
-  componentDidMount(){
-
-  }
-
   render() {
     let rates = this.state.rates;
     return (
@@ -43,9 +39,9 @@ class Board extends React.Component {
         <div>Base: { this.state.base}</div>
         <div>Rates: { Object.keys(rates).map((rate, i) => {
           return (
-            <p key={i}>{rate} : {rates[rate]}</p>
+            <Rate rate={rate} price={rates[rate]} key={i}/>
           )
-        }) }</div>
+        })}</div>
       </div>
     )
   }
