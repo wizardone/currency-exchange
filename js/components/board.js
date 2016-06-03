@@ -20,7 +20,7 @@ class Board extends React.Component {
           reject(request.statusText);
         }
       }
-      request.open('GET', `${config.get('serverUrl')}?base=${base}`);
+      request.open('GET', `${config.get('baseUrl')}?base=${base}`);
       request.send();
 
     }).then((response) => {
@@ -32,7 +32,6 @@ class Board extends React.Component {
   }
 
   changeBaseValue(e){
-    console.log(e.target.value);
     this.getRates(e.target.value);
   }
 
