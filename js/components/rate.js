@@ -6,9 +6,10 @@ export default class Rate extends React.Component {
   }
 
   render(){
+    let { rate, price } = this.props
     return (
       <div>
-        {this.props.rate} : {this.props.price}
+        { rate } : { price }
       </div>
     )
   }
