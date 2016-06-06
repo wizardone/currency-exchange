@@ -37,13 +37,13 @@ class Board extends React.Component {
   }
 
   componentDidMount(){
-    this.timer = setTimeout(() => {
+    this.interval = setInterval(() => {
       this.getRates(this.state.base);
-    }, 1000)
+    }, config.get('requestInterval'))
   }
 
   componentWillUnmount(){
-    clearTimeout(this.timer)
+    clearInterval(this.interval)
   }
 
   render() {

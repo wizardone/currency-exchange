@@ -13,8 +13,6 @@ export default class Rate extends React.Component {
     if(oldPrice != newPrice) {
       newPrice > oldPrice ? this.setState({ direction: 1 }) : this.setState({ direction: -1 });
       this.setState({ changed: true });
-    } else {
-      console.log('Price not changed');
     }
   }
 
