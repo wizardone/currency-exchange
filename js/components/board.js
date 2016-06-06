@@ -7,6 +7,7 @@ class Board extends React.Component {
   constructor(){
     super();
     this.state = { rates: '', error: false, base: 'EUR' }
+    this.timer = null;
   }
 
   getRates(base = ''){
@@ -36,7 +37,13 @@ class Board extends React.Component {
   }
 
   componentDidMount(){
-    this.getRates(this.state.base);
+    this.timer = setTimeout(() => {
+      this.getRates(this.state.base);
+    }, 1000)
+  }
+
+  componentWillUnmount(){
+    clearTimeout(this.timer)
   }
 
   render() {
