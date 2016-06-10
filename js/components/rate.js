@@ -25,14 +25,14 @@ export default class Rate extends React.Component {
     }
 
     return (
-      <img src={ arrowPath } width={15} height={15}/>
+      <img src={ arrowPath } width={15} height={15} className={'currency-exchange-direction'}/>
     )
   }
 
   render(){
     let { rate, price } = this.props
     return (
-      <div>
+      <div className={"currency-exchange-rate"}>
       { rate } : { price } { this.state.changed == true ? this.rateImage() : null }
       </div>
     )

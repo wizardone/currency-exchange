@@ -37,6 +37,8 @@ class Board extends React.Component {
   }
 
   componentDidMount(){
+    this.getRates(this.state.base);
+
     this.interval = setInterval(() => {
       this.getRates(this.state.base);
     }, config.get('requestInterval'))
@@ -50,8 +52,8 @@ class Board extends React.Component {
     let rates = this.state.rates;
     let base = this.state.base
     return (
-      <div>
-        <select onChange={ this.changeBaseValue.bind(this) } defaultValue={base}>
+      <div className={'currency-exchange-main'}>
+        <select onChange={ this.changeBaseValue.bind(this) } defaultValue={base} className={'base-select'}>
           <option value="USD">USD</option>
           <option value="EUR">EUR</option>
         </select>
