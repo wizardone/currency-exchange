@@ -3,7 +3,7 @@ let ReactDOM = require('react-dom');
 let config  = require('../config.js');
 import Rate from './rate.js'
 
-class Board extends React.Component {
+class ExchangeBoard extends React.Component {
   constructor(){
     super();
     this.state = { rates: '', error: false, base: 'EUR' }
@@ -67,4 +67,4 @@ class Board extends React.Component {
     )
   }
 }
-ReactDOM.render(<Board/>, document.getElementById('body'))
+ReactDOM.render(<ExchangeBoard/>, document.getElementById(config.get('renderTo')))
