@@ -67,4 +67,15 @@ class ExchangeBoard extends React.Component {
     )
   }
 }
-ReactDOM.render(<ExchangeBoard/>, document.getElementById(config.get('renderTo')))
+
+class ReactExchangeBoard {
+  constructor(container){
+    this._container = container;
+  }
+
+  render(){
+    ReactDOM.render(<ExchangeBoard />, document.getElementById(this._container))
+  }
+}
+new ReactExchangeBoard('body').render();
+//ReactDOM.render(<ExchangeBoard />, document.getElementById(config.get('renderTo')))
