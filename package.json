@@ -1,6 +1,6 @@
 {
   "name": "currency_exchange_board",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "service tracking currency changes",
   "main": "index.js",
   "scripts": {
@@ -21,5 +21,10 @@
     "babelify": "^7.3.0",
     "react": "^15.0.2",
     "react-dom": "^15.0.2"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
   }
 }
