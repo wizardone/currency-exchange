@@ -68,7 +68,7 @@ class ExchangeBoard extends React.Component {
   }
 }
 
-export default class CurrencyExchangeBoard {
+class CurrencyExchangeBoard {
   constructor(container){
     this._container = container;
   }
@@ -77,3 +77,5 @@ export default class CurrencyExchangeBoard {
     ReactDOM.render(<ExchangeBoard />, document.getElementById(this._container))
   }
 }
+
+module.exports = CurrencyExchangeBoard
