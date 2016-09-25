@@ -1,11 +1,11 @@
 {
   "name": "currency_exchange_board",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "service tracking currency changes",
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "build": "watchify demo.js -o lib/components/board.js -t [ babelify --presets [es2015 react] ] -v"
+    "build_demo": "watchify demo.js -o lib/components/demo.js -t [ babelify --presets [es2015 react] ] -v"
   },
   "keywords": [
     "currency",
