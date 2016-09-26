@@ -1,6 +1,6 @@
 {
   "name": "currency_exchange_board",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "service tracking currency changes",
   "main": "index.js",
   "scripts": {
