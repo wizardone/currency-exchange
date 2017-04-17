@@ -3,7 +3,7 @@ let ReactDOM = require('react-dom');
 let config  = require('../config.js');
 import Rate from './rate.js'
 
-class ExchangeBoard extends React.Component {
+export default class CurrencyExchangeBoard extends React.Component {
   constructor(){
     super();
     this.state = { rates: '', error: false, base: 'EUR' }
@@ -67,15 +67,3 @@ class ExchangeBoard extends React.Component {
     )
   }
 }
-
-class CurrencyExchangeBoard {
-  constructor(container){
-    this._container = container;
-  }
-
-  render(){
-    ReactDOM.render(<ExchangeBoard />, document.getElementById(this._container))
-  }
-}
-
-module.exports = CurrencyExchangeBoard

@@ -2,10 +2,12 @@
   "name": "currency_exchange_board",
   "version": "1.0.7",
   "description": "service tracking currency changes",
-  "main": "index.js",
+  "main": "./lib/bundle.js",
   "scripts": {
     "test": "mocha --compilers js:babel-register",
-    "build_demo": "watchify demo.js -o lib/components/demo.js -t [ babelify --presets [es2015 react] ] -v"
+    "build": "webpack",
+    "start_dev": "webpack-dev-server --config demo.webpack.config.js",
+    "build_dev": "webpack --config demo.webpack.config.js"
   },
   "keywords": [
     "currency",
@@ -20,6 +22,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.8.0",
+    "babel-loader": "^6.4.1",
     "babel-preset-es2015": "^6.6.0",
     "babel-preset-react": "^6.5.0",
     "babel-register": "^6.14.0",
@@ -28,11 +31,8 @@
     "mocha": "^3.0.2",
     "react": "^15.3.2",
     "react-addons-test-utils": "^15.3.2",
-    "react-dom": "^15.0.2"
-  },
-  "browserify": {
-    "transform": [
-      "babelify"
-    ]
+    "react-dom": "^15.0.2",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.2"
   }
 }
