@@ -2,11 +2,11 @@ let path = require('path');
 
 module.exports = {
   entry: {
-    main: './demo.js'
+    main: './sample/demo.js'
   },
   output: {
     filename: 'demo-bundle.js',
-    path: path.resolve(__dirname, 'lib')
+    path: path.resolve(__dirname, 'sample')
   },
   module: {
     rules: [
@@ -19,9 +19,14 @@ module.exports = {
           presets: ['es2015', 'react']
         }
       }
+    ],
+    loaders: [
+      
     ]
   },
   devServer: {
+    contentBase: path.join(__dirname, "sample"),
+    publicPath: path.join(__dirname, "sample"),
     port: 9000,
     compress: true,
     hot: true

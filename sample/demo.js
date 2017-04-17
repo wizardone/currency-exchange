@@ -1,4 +1,4 @@
-import CurrencyExchangeBoard from './js/components/exchange_board.js';
+import CurrencyExchangeBoard from '../js/components/exchange_board.js';
 import React from 'react'
 import ReactDom from 'react-dom'
 
