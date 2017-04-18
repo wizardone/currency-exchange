@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 let config  = require('../config.js');
 import Rate from './rate.js'
 

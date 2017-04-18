@@ -2,7 +2,7 @@
   "name": "currency_exchange_board",
   "version": "1.0.7",
   "description": "service tracking currency changes",
-  "main": "index.js",
+  "main": "lib/bundle.js",
   "scripts": {
     "test": "mocha --compilers js:babel-register",
     "build": "webpack",

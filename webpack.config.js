@@ -6,7 +6,9 @@ module.exports = {
   },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'lib')
+    path: path.resolve(__dirname, 'lib'),
+    library: 'currency_exchange_board',
+    libraryTarget: 'umd'
   },
   module: {
     rules: [
