@@ -11033,6 +11033,14 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _react = __webpack_require__(34);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(58);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
 var _rate = __webpack_require__(89);
 
 var _rate2 = _interopRequireDefault(_rate);
@@ -11045,8 +11053,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var React = __webpack_require__(34);
-var ReactDOM = __webpack_require__(58);
 var config = __webpack_require__(90);
 
 var CurrencyExchangeBoard = function (_React$Component) {
@@ -11114,35 +11120,35 @@ var CurrencyExchangeBoard = function (_React$Component) {
     value: function render() {
       var rates = this.state.rates;
       var base = this.state.base;
-      return React.createElement(
+      return _react2.default.createElement(
         'div',
         { className: 'currency-exchange-main' },
-        React.createElement(
+        _react2.default.createElement(
           'select',
           { onChange: this.changeBaseValue.bind(this), defaultValue: base, className: 'base-select' },
-          React.createElement(
+          _react2.default.createElement(
             'option',
             { value: 'USD' },
             'USD'
           ),
-          React.createElement(
+          _react2.default.createElement(
             'option',
             { value: 'EUR' },
             'EUR'
           )
         ),
-        React.createElement(
+        _react2.default.createElement(
           'div',
           null,
           'Base: ',
           this.state.base
         ),
-        React.createElement(
+        _react2.default.createElement(
           'div',
           null,
           'Rates: ',
           Object.keys(rates).map(function (rate, i) {
-            return React.createElement(_rate2.default, { rate: rate, price: rates[rate], key: i });
+            return _react2.default.createElement(_rate2.default, { rate: rate, price: rates[rate], key: i });
           })
         )
       );
@@ -11150,7 +11156,7 @@ var CurrencyExchangeBoard = function (_React$Component) {
   }]);
 
   return CurrencyExchangeBoard;
-}(React.Component);
+}(_react2.default.Component);
 
 exports.default = CurrencyExchangeBoard;
 

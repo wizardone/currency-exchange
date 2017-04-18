@@ -21,6 +21,10 @@ module.exports = {
       }
     ]
   },
+  externals: {
+    'react': 'react',
+    'react-dom': 'reactDOM'
+  },
   devServer: {
     port: 9000,
     compress: true,

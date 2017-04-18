@@ -2,12 +2,12 @@
   "name": "currency_exchange_board",
   "version": "1.0.7",
   "description": "service tracking currency changes",
-  "main": "./lib/bundle.js",
+  "main": "index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-register",
     "build": "webpack",
-    "start_dev": "webpack-dev-server --config demo.webpack.config.js",
-    "build_dev": "webpack --config demo.webpack.config.js"
+    "start_dev": "webpack-dev-server --config sample.webpack.config.js",
+    "build_dev": "webpack --config sample.webpack.config.js"
   },
   "keywords": [
     "currency",
