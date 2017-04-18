@@ -1,4 +1,5 @@
 let path = require('path');
+let CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -19,11 +20,13 @@ module.exports = {
           presets: ['es2015', 'react']
         }
       }
-    ],
-    loaders: [
-      
     ]
   },
+  plugins: [
+    new CopyWebpackPlugin([
+      { from: 'static/images/**' }
+    ])
+  ],
   devServer: {
     contentBase: path.join(__dirname, "sample"),
     publicPath: path.join(__dirname, "sample"),

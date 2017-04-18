@@ -13,11 +13,4 @@ describe('CurrencyExchangeBoard', function() {
       expect(exchangeBoard._container).to.eql('body')
     })
   })
-
-  describe('#render()', function() {
-    it('renders the element', function() {
-      let exchangeBoard = new CurrencyExchangeBoard('body')
-      expect(exchangeBoard.render).to.be.a('function')
-    })
-  })
 })
