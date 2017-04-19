@@ -19,7 +19,8 @@ module.exports = {
         options: {
           presets: ['es2015', 'react']
         }
-      }
+      },
+      { test: /\.jpg$/, loader: 'url-loader' }
     ]
   },
   plugins: [

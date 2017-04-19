@@ -1,9 +1,11 @@
-let React = require('react');
+import React from 'react';
+import greenArrow from '../../static/images/green_arrow.jpg';
+import redArrow from '../../static/images/red_arrow.jpg';
 
 export default class Rate extends React.Component {
   constructor(){
     super();
-    this.state = { changed: false, direction: 0}
+    this.state = { changed: false, direction: 0 }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -18,14 +20,15 @@ export default class Rate extends React.Component {
 
   rateImage() {
     let arrowPath = '';
+    let arrowImage = null;
     if(this.state.direction == 1){
-      arrowPath = 'static/images/green_arrow.jpg';
+      arrowImage = greenArrow
     } else if(this.state.direction == -1) {
-      arrowPath = 'static/images/red_arrow.jpg';
+      arrowImage = redArrow
     }
 
     return (
-      <img src={ arrowPath } width={15} height={15} className={'currency-exchange-direction'}/>
+      <img src={ arrowImage } width={15} height={15} className={'currency-exchange-direction'}/>
     )
   }
 
