@@ -5,7 +5,7 @@
   "main": "lib/bundle.js",
   "scripts": {
     "test": "mocha-webpack --webpack-config webpack.config.js \"test/**/*.js\"",
-    "build": "webpack",
+    "build": "webpack --config webpack.config.js",
     "start_dev": "webpack-dev-server --config sample.webpack.config.js",
     "build_dev": "webpack --config sample.webpack.config.js"
   },
