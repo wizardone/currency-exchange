@@ -1,5 +1,4 @@
 let path = require('path');
-let CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -25,11 +24,7 @@ module.exports = {
       { test: /\.jpg$/, loader: 'url-loader' }
     ]
   },
-  plugins: [
-    new CopyWebpackPlugin([
-      { from: 'static/images/**' }
-    ])
-  ],
+  plugins: [],
   externals: {
     'react': 'react',
     'react-dom': 'reactDOM'
